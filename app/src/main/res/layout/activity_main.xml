@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?android:attr/colorBackground"
+    android:fitsSystemWindows="true"
+    android:paddingTop="48dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageButton
+            android:id="@+id/btnMotivation"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:backgroundTint="#59514F"
+            android:src="@drawable/motivation_badge"
+            android:background="@drawable/circle_button"
+            android:clickable="true"
+            android:contentDescription="Motivation" />
+        <!-- button for motivation. -->
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_weight="1"
+            android:text="My Routines"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:textColor="?android:attr/textColorPrimary"
+            android:background="@drawable/reminder_card_background"/>
+        <!-- heading -->
+
+        <ImageButton
+            android:id="@+id/btnAdd"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/circle_button"
+            android:src="@drawable/add_badge"
+            android:clickable="true"
+            android:contentDescription="Add Reminder"
+            android:layout_marginEnd="8dp" />
+        <!-- button for add. -->
+
+        <ImageButton
+            android:id="@+id/btnSettings"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/circle_button"
+            android:src="@drawable/setting_badge"
+            android:contentDescription="Settings"
+            android:clickable="true"
+            android:layout_marginEnd="8dp" />
+
+    </LinearLayout>
+    <!-- for heading and buttons -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:listitem="@layout/item_routine"/>
+    <!-- for the reminder list. -->
+
+</LinearLayout>
+<!-- root layout -->

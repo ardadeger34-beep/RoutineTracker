@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?android:attr/colorBackground"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="16dp"
+    android:paddingTop="48dp">
+
+    <ImageButton
+        android:id="@+id/btnMotivationBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/circle_button"
+        android:src="@drawable/arrow_back"
+        android:contentDescription="Back"
+        android:layout_marginBottom="8dp"  />
+    <!-- back button -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:background="@drawable/reminder_card_background"
+        android:layout_margin="4dp" >
+
+        <TextView
+            android:id="@+id/tv_motivation_quote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quote goes here"
+            android:textSize="20sp"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:textColor="?android:attr/textColorPrimary"
+            android:paddingTop="32dp"/>
+        <!-- For motivational quote -->
+
+        <TextView
+            android:id="@+id/tv_motivation_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-Author Name"
+            android:textSize="16sp"
+            android:gravity="end"
+            android:textColor="?android:attr/textColorPrimary"
+            android:layout_marginEnd="24dp" />
+        <!-- for author name -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <!-- spacer for quotes and progress bar. -->
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+        <!-- for progress bar -->
+
+        <Button
+            android:id="@+id/btn_fetch_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="New Quote"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#59514F"
+            android:layout_margin="16dp" />
+        <!-- for next button -->
+
+
+    </LinearLayout>
+    <!-- for background layout that houses everything. -->
+
+</LinearLayout>
+<!-- root layout for full screen -->

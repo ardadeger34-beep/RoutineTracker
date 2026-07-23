@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:elevation="4dp"
+    android:background="?android:attr/colorBackground"
+    android:layout_margin="8dp">
+    <!-- for 1 reminder bloke, we add padding to make it not squish to the edges.-->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <!-- location of the name and date -->
+
+            <TextView
+                android:id="@+id/tvReminderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reminder Name"
+                android:textSize="18sp"
+                android:textColor="?android:attr/textColorPrimary"/>
+            <!-- for name text -->
+
+            <TextView
+                android:id="@+id/tvDateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09:00 - Mon, Jun 6"
+                android:textSize="13sp"
+                android:textColor="?android:attr/textColorPrimary" />
+            <!-- for date and time -->
+
+        </LinearLayout>
+        <!-- for reminder name and the date of it on the left side. layout weight to determine left horizontal space. -->
+
+        <View
+            android:id="@+id/viewImportanceDot"
+            android:background="@drawable/circle_dot"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_gravity="center_vertical" />
+        <!-- for the importance dot that is on the right middle of the bloke the color would be determined from user input,
+             we add margin to make the dot pushed away from right side.-->
+
+
+</LinearLayout>
+<!-- match_parent = page's values , wrap_content = be as long as the thing inside, horizontal = left to right
+    we use linear layout bc it is going to determine the position when we have more than 1 reminder-->
